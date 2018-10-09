@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    DateTime nextYear = new DateTime(@Model.Year + 1, 1, 1);
 }
 
 
@@ -19,5 +20,9 @@ else
     <h2>Good Evening</h2>
 }
 
-<h3>@Model.ToLongDateString()</h3>
+<h3>It is now @Model.ToShortTimeString() on @Model.ToLongDateString()</h3>
+<!--<p>@DateTime.Parse("01/1/2019").Subtract(@Model).Days</p>-->
+<p>There are currently @nextYear.Subtract(@Model).Days days remaining in @Model.Year</p>
+
+<a class="btn btn-success" href="#">Generate Waffles</a>
 
