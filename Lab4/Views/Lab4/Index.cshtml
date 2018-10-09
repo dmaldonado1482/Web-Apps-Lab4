@@ -1,0 +1,24 @@
+﻿@model DateTime
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+
+@if (Model.Hour < 12)
+{
+    <h2>Good Morning</h2>
+}
+else if (Model.Hour < 18)
+{
+    <h2>Good Afternoon</h2>
+}
+else
+{
+    <h2>Good Evening</h2>
+}
+
+<h3>@Model.ToLongDateString()</h3>
+
