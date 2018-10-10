@@ -1,13 +1,30 @@
 ﻿@using Microsoft.AspNetCore.Html;
 
-@model HtmlString
+@model List<HtmlString>
 
 @{
     ViewData["Title"] = "Waffler";
-    
+
 }
 
-<h2>Waffler</h2>
+<h1 class="bg-primary" id="waffleHeading">Generate Waffles</h1>
 
-@Model
+<div class="btn-toolbar">
+    <button type="button" class="btn btn-success">1</button>
+    <button type="button" class="btn btn-success">2</button>
+    <button type="button" class="btn btn-success">3</button>
+    <button type="button" class="btn btn-success">4</button>
+    <button type="button" class="btn btn-success">5</button>
+</div><br />
 
+<div class="container">
+    @if (@Model.Count != 0)
+    {
+        @foreach (HtmlString text in @Model)
+        {
+            <div class="row table-bordered b bg-info">
+                <div class="col">@text</div>
+            </div><br />
+        }
+    }
+</div>

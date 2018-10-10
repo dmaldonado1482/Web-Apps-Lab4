@@ -10,17 +10,25 @@ namespace Lab4.Controllers
 {
     public class Lab4Controller : Controller
     {
+        private static List<HtmlString> waffles = new List<HtmlString>();
+
         public IActionResult Index()
         {
             DateTime date = DateTime.Now;
             return View(date);
         }
 
-        public IActionResult Waffler()
+        public IActionResult Waffler(int ID)
         {
-            var waffle = WaffleEngine.Html(2, true, false);
-            HtmlString waffle2 = new HtmlString(waffle);
-            return View(waffle2);
+            waffles.Clear();
+            for (int i = 0; i < ID; i++)
+            {
+                var waffle = WaffleEngine.Html(2, true, false);
+                HtmlString waffle2 = new HtmlString(waffle);
+                waffles.Add(waffle2);
+            }
+
+            return View(waffles);
         }
 
         
