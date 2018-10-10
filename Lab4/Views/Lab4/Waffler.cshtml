@@ -6,15 +6,16 @@
     ViewData["Title"] = "Waffler";
 
 }
-
-<h1 class="bg-primary" id="waffleHeading">Generate Waffles</h1>
+<div class="container bg-primary">
+    <h1 class="bg-primary" id="waffleHeading">Generate Waffles</h1>
+</div><br />
 
 <div class="btn-toolbar">
-    <button type="button" class="btn btn-success">1</button>
-    <button type="button" class="btn btn-success">2</button>
-    <button type="button" class="btn btn-success">3</button>
-    <button type="button" class="btn btn-success">4</button>
-    <button type="button" class="btn btn-success">5</button>
+    <a class="btn btn-success" asp-controller="Lab4" asp-action="Waffler" asp-route-id="1">1</a>
+    <a class="btn btn-success" asp-controller="Lab4" asp-action="Waffler" asp-route-id="2">2</a>
+    <a class="btn btn-success" asp-controller="Lab4" asp-action="Waffler" asp-route-id="3">3</a>
+    <a class="btn btn-success" asp-controller="Lab4" asp-action="Waffler" asp-route-id="4">4</a>
+    <a class="btn btn-success" asp-controller="Lab4" asp-action="Waffler" asp-route-id="5">5</a>
 </div><br />
 
 <div class="container">

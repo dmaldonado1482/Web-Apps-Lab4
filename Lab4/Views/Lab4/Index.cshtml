@@ -9,15 +9,21 @@
 
 @if (Model.Hour < 12)
 {
-    <h2>Good Morning</h2>
+    <div class="container bg-primary">
+        <h2>Good Morning</h2>
+    </div>
 }
 else if (Model.Hour < 18)
 {
-    <h2>Good Afternoon</h2>
+    <div class="container bg-primary">
+        <h2>Good Afternoon</h2>
+    </div>
 }
 else
 {
-    <h2>Good Evening</h2>
+    <div class="container bg-primary">
+        <h2>Good Evening</h2>
+    </div>
 }
 
 <h3>It is now @Model.ToShortTimeString() on @Model.ToLongDateString()</h3>
